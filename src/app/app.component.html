@@ -1,0 +1,20 @@
+<h1>Train Seat Reservation</h1>
+
+<div class="seat-input">
+  <input type="number" [(ngModel)]="numSeats" min="1" max="7" placeholder="Enter number of seats" />
+  <button (click)="bookSeats(numSeats)">Book Seats</button>
+</div>
+
+<div *ngIf="bookedSeats.length > 0" class="booked-message">
+  <p>Booked Seats: {{ bookedSeats.join(', ') }}</p>
+</div>
+
+<div class="seat-grid">
+  <div *ngFor="let row of seats" class="row">
+    <div *ngFor="let seat of row" 
+         class="seat" 
+         [ngClass]="{'available': !seat.booked, 'booked': seat.booked}">
+      {{ seat.number }}
+    </div>
+  </div>
+</div>

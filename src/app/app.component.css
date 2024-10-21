@@ -1,0 +1,41 @@
+.seat-input {
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.seat.booked {
+  background-color: red;
+}
+
+.seat.available:hover {
+  background-color: yellow;
+}
+
+.booked-message {
+  margin: 20px 0;
+  color: green;
+}
+
+.seat-grid {
+  margin-top: 20px;
+}
